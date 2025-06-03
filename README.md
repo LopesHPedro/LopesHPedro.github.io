@@ -15,6 +15,7 @@ e acelerou a construção, mantendo o foco na qualidade e no design.
 
 ⚠️ **Obs.:** Este site é um **protótipo**.
 Algumas funcionalidades ainda não estão ativas.
+
 Sei que ainda está longe do ideal, mas já é um começo! 
 Aos poucos, vou ajustando e aprimorando.
 
