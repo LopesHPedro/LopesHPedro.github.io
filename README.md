@@ -1,6 +1,6 @@
 # Meu Site Pessoal / Portfólio
 
-Este site foi criado para compartilhar minha jornada como **data scientist** e, 
+Este site foi criado para compartilhar minha jornada como **analista de dados** e, 
 futuramente, funcionar como um **portfólio profissional**.
 
 Desenvolvido com a ajuda do [Lovable](https://lovable.dev/), que facilitou o processo 
