@@ -29,13 +29,13 @@ const Footer = () => {
               Pedro H. Lopes
             </button>
             <p className="text-gray-400 text-sm">
-              Data Analysis • Business Intelligence • Analytics
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Navigation Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Navegação</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.navigation')}</h3>
             <ul className="space-y-2">
               {[
                 { key: 'nav.home', href: '#home' },
@@ -63,7 +63,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Conecte-se</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t('footer.connect')}</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-dark-300 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Pedro H. Lopes. Todos os direitos reservados.
+            © {new Date().getFullYear()} Pedro H. Lopes. {t('footer.rights')}
           </p>
         </div>
       </div>

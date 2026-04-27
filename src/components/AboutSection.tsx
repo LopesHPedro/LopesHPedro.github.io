@@ -1,15 +1,22 @@
 
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
+import { BarChart3, Brain, LineChart, Wrench, type LucideIcon } from 'lucide-react';
+
+type SkillGroup = {
+  categoryKey: string;
+  icon: LucideIcon;
+  items: string[];
+};
 
 const AboutSection = () => {
   const { t } = useTranslation();
 
-  const skills = [
-    { category: '📊 Data Analysis', items: ['Excel', 'SQL', 'Python (pandas)'] },
-    { category: '📈 Data Visualization', items: ['Power BI', 'Matplotlib'] },
-    { category: '🧠 Business Skills', items: ['Análise de métricas', 'Geração de insights', 'Tomada de decisão orientada a dados'] },
-    { category: '🛠️ Tools', items: ['Jupyter', 'Git'] }
+  const skills: SkillGroup[] = [
+    { categoryKey: 'skills.dataAnalysis', icon: BarChart3, items: ['Excel', 'SQL', 'Python (pandas)'] },
+    { categoryKey: 'skills.dataVisualization', icon: LineChart, items: ['Power BI', 'Matplotlib'] },
+    { categoryKey: 'skills.business', icon: Brain, items: ['skills.metrics', 'skills.insights', 'skills.decision'] },
+    { categoryKey: 'skills.tools', icon: Wrench, items: ['Jupyter', 'Git'] }
   ];
 
   return (
@@ -49,9 +56,9 @@ const AboutSection = () => {
                 </h3>
                 <div className="bg-dark-200 p-4 rounded-lg border border-dark-300">
                   <p className="text-gray-300">
-                    <span className="font-medium">Graduação em Sistemas de Informação</span>
+                    <span className="font-medium">{t('about.degree')}</span>
                     <br />
-                    <span className="text-sm text-gray-400">2023 - Atualmente - UNIFEI(Universidade Federal de Itajubá)</span>
+                    <span className="text-sm text-gray-400">{t('about.degreePeriod')}</span>
                   </p>
                 </div>
               </div>
@@ -70,15 +77,23 @@ const AboutSection = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skillGroup, index) => (
+            {skills.map((skillGroup, index) => {
+              const Icon = skillGroup.icon;
+
+              return (
               <div
-                key={skillGroup.category}
+                key={skillGroup.categoryKey}
                 className="glass-effect rounded-lg p-6 hover-lift"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h4 className="text-lg font-semibold text-neon-green mb-4">
-                  {skillGroup.category}
-                </h4>
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-md border border-neon-green/30 bg-dark-200 text-neon-green">
+                    <Icon size={20} strokeWidth={1.8} />
+                  </span>
+                  <h4 className="text-lg font-semibold text-neon-green">
+                    {t(skillGroup.categoryKey)}
+                  </h4>
+                </div>
                 <ul className="space-y-2">
                   {skillGroup.items.map((skill) => (
                     <li
@@ -86,12 +101,13 @@ const AboutSection = () => {
                       className="text-gray-300 flex items-center"
                     >
                       <span className="w-2 h-2 bg-neon-green rounded-full mr-3"></span>
-                      {skill}
+                      {skill.includes('.') ? t(skill) : skill}
                     </li>
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

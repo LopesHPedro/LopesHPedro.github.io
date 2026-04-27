@@ -1,55 +1,22 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { Github } from 'lucide-react';
+import { BarChart3, Github } from 'lucide-react';
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
-  const [filter, setFilter] = useState('all');
 
   const projects = [
     {
       id: 1,
-      title: 'Roadmap Análise de Dados - Study Journey',
-      description: 'Um roadmap completo e estruturado para aprender Análise de Dados, desde fundamentos até tópicos avançados.',
+      titleKey: 'portfolio.sales.title',
+      descriptionKey: 'portfolio.sales.description',
       image: '/placeholder.svg',
-      technologies: ['Python', 'Jupyter', 'Data Analysis', 'Dashboards'],
-      category: 'education',
-      githubUrl: 'https://github.com/LopesHPedro/roadmap-ciencia-dados-study-journey',
-      liveUrl: ''
-    },
-    {
-      id: 2,
-      title: 'Análise Exploratória - E-commerce',
-      description: 'Análise completa de dados de vendas de e-commerce com insights sobre padrões de compra e comportamento do cliente.',
-      image: '/placeholder.svg',
-      technologies: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
-      category: 'analysis',
-      githubUrl: '#',
-      liveUrl: ''
-    },
-    {
-      id: 3,
-      title: 'Análise de Retenção de Clientes',
-      description: 'Análise de métricas de clientes para identificar padrões de cancelamento e oportunidades de retenção.',
-      image: '/placeholder.svg',
-      technologies: ['Python', 'Pandas', 'Power BI', 'Business Insights'],
-      category: 'insights',
-      githubUrl: '#',
+      technologies: ['Python', 'Pandas', 'portfolio.tech.dataAnalysis', 'portfolio.tech.olistDataset'],
+      githubUrl: 'https://github.com/LopesHPedro/sales-analysis',
       liveUrl: ''
     }
   ];
-
-  const categories = [
-    { key: 'all', label: 'Todos' },
-    { key: 'analysis', label: 'Análise' },
-    { key: 'insights', label: 'Insights' },
-    { key: 'education', label: 'Educação' }
-  ];
-
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
 
   return (
     <section id="portfolio" className="section-padding bg-dark-100">
@@ -64,26 +31,9 @@ const PortfolioSection = () => {
           <div className="w-24 h-1 bg-neon-green mx-auto mt-6"></div>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.key}
-              onClick={() => setFilter(category.key)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                filter === category.key
-                  ? 'bg-neon-green text-dark-50'
-                  : 'bg-dark-200 text-gray-300 hover:bg-dark-300 hover:text-neon-green'
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 max-w-xl mx-auto">
+          {projects.map((project, index) => (
             <div
               key={project.id}
               className="glass-effect rounded-xl overflow-hidden hover-lift group"
@@ -91,7 +41,9 @@ const PortfolioSection = () => {
             >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-neon-green/20 to-neon-blue/20 flex items-center justify-center">
-                <div className="text-4xl">🔬</div>
+                <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green">
+                  <BarChart3 size={34} strokeWidth={1.8} />
+                </div>
                 <div className="absolute inset-0 bg-dark-50/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
                     {project.githubUrl && (
@@ -111,10 +63,10 @@ const PortfolioSection = () => {
               {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-green transition-colors">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                  {project.description}
+                  {t(project.descriptionKey)}
                 </p>
 
                 {/* Technologies */}
@@ -124,7 +76,7 @@ const PortfolioSection = () => {
                       key={tech}
                       className="bg-dark-200 text-neon-green px-3 py-1 rounded-full text-xs font-medium"
                     >
-                      {tech}
+                      {tech.includes('.') ? t(tech) : tech}
                     </span>
                   ))}
                 </div>

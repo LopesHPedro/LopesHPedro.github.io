@@ -126,7 +126,7 @@ const ContactSection = () => {
                 disabled={isSubmitting}
                 className="w-full bg-neon-green text-dark-50 px-8 py-4 rounded-lg font-semibold hover:bg-neon-green/90 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Enviando...' : t('contact.send')}
+                {isSubmitting ? t('contact.sending') : t('contact.send')}
               </button>
             </form>
 
@@ -143,7 +143,7 @@ const ContactSection = () => {
             {/* Social Links */}
             <div className="glass-effect rounded-lg p-8">
               <h3 className="text-xl font-bold text-neon-green mb-6">
-                Redes Sociais
+                {t('contact.social')}
               </h3>
               <div className="space-y-4">
                 {socialLinks.map((social) => (

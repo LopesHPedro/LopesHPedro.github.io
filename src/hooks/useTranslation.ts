@@ -47,16 +47,16 @@ const translations: Translations = {
   
   // Hero Section
   'hero.title': {
-    pt: 'Graduando em Sistemas de Informação & Aspirante a Analista de Dados',
-    en: 'Information Systems Student & Aspiring Data Analyst',
-    es: 'Estudiante de Sistemas de Información y Aspirante a Analista de Datos',
-    fr: 'Étudiant en Systèmes d\'Information et Aspirant Data Analyst'
+    pt: 'Graduando em Sistemas de Informação com foco em Análise de Dados',
+    en: 'Information Systems Student focused on Data Analysis',
+    es: 'Estudiante de Sistemas de Información con enfoque en Análisis de Datos',
+    fr: 'Étudiant en Systèmes d\'Information axé sur l\'Analyse de Données'
   },
   'hero.description': {
-    pt: 'Transformo dados em insights valiosos através de análises, dashboards e visualizações claras. Foco em identificar padrões, problemas e oportunidades que apoiam decisões de negócio.',
-    en: 'I transform data into valuable insights through analysis, dashboards and clear visualizations. Focused on identifying patterns, problems and opportunities that support business decisions.',
-    es: 'Transformo datos en insights valiosos a través de análisis, dashboards y visualizaciones claras. Enfocado en identificar patrones, problemas y oportunidades que apoyan decisiones de negocio.',
-    fr: 'Je transforme les données en insights précieux grâce à des analyses, tableaux de bord et visualisations claires. Axé sur l\'identification des tendances, problèmes et opportunités qui soutiennent les décisions métier.'
+    pt: 'Ajudo clientes a entender seus dados e tomar decisões melhores através de análise prática e dashboards.',
+    en: 'I help clients understand their data and make better decisions through practical analysis and dashboards.',
+    es: 'Ayudo a clientes a entender sus datos y tomar mejores decisiones a través de análisis práctico y dashboards.',
+    fr: 'J\'aide les clients à comprendre leurs données et à prendre de meilleures décisions grâce à des analyses pratiques et des tableaux de bord.'
   },
   'hero.cta': {
     pt: 'Ver Meu Trabalho',
@@ -102,6 +102,60 @@ const translations: Translations = {
     es: 'Descargar CV',
     fr: 'Télécharger CV'
   },
+  'about.degree': {
+    pt: 'Graduação em Sistemas de Informação',
+    en: 'Bachelor\'s Degree in Information Systems',
+    es: 'Grado en Sistemas de Información',
+    fr: 'Licence en Systèmes d\'Information'
+  },
+  'about.degreePeriod': {
+    pt: '2023 - Atualmente - UNIFEI (Universidade Federal de Itajubá)',
+    en: '2023 - Present - UNIFEI (Federal University of Itajubá)',
+    es: '2023 - Actualmente - UNIFEI (Universidad Federal de Itajubá)',
+    fr: '2023 - Présent - UNIFEI (Université Fédérale d\'Itajubá)'
+  },
+  'skills.dataAnalysis': {
+    pt: 'Análise de Dados',
+    en: 'Data Analysis',
+    es: 'Análisis de Datos',
+    fr: 'Analyse de Données'
+  },
+  'skills.dataVisualization': {
+    pt: 'Visualização de Dados',
+    en: 'Data Visualization',
+    es: 'Visualización de Datos',
+    fr: 'Visualisation de Données'
+  },
+  'skills.business': {
+    pt: 'Habilidades de Negócio',
+    en: 'Business Skills',
+    es: 'Habilidades de Negocio',
+    fr: 'Compétences Métier'
+  },
+  'skills.tools': {
+    pt: 'Ferramentas',
+    en: 'Tools',
+    es: 'Herramientas',
+    fr: 'Outils'
+  },
+  'skills.metrics': {
+    pt: 'Análise de métricas',
+    en: 'Metrics analysis',
+    es: 'Análisis de métricas',
+    fr: 'Analyse des métriques'
+  },
+  'skills.insights': {
+    pt: 'Geração de insights',
+    en: 'Insight generation',
+    es: 'Generación de insights',
+    fr: 'Génération d\'insights'
+  },
+  'skills.decision': {
+    pt: 'Tomada de decisão orientada a dados',
+    en: 'Data-driven decision making',
+    es: 'Toma de decisiones basada en datos',
+    fr: 'Prise de décision basée sur les données'
+  },
   
   // Services Section
   'services.title': {
@@ -132,10 +186,10 @@ const translations: Translations = {
   },
   
   'service.visualization.title': {
-    pt: 'Visualização de Dados',
-    en: 'Data Visualization',
-    es: 'Visualización de Datos',
-    fr: 'Visualisation des Données'
+    pt: 'Visualização',
+    en: 'Visualization',
+    es: 'Visualización',
+    fr: 'Visualisation'
   },
   'service.visualization.description': {
     pt: 'Criação de dashboards e relatórios claros para acompanhar métricas e facilitar a tomada de decisão.',
@@ -156,20 +210,7 @@ const translations: Translations = {
     es: 'Transformación de datos en información estratégica para mejorar resultados y eficiencia.',
     fr: 'Transformation des données en informations stratégiques pour améliorer les résultats et l\'efficacité.'
   },
-  
-  'service.cleaning.title': {
-    pt: 'Limpeza e Tratamento de Dados',
-    en: 'Data Cleaning and Preparation',
-    es: 'Limpieza y Tratamiento de Datos',
-    fr: 'Nettoyage et Préparation des Données'
-  },
-  'service.cleaning.description': {
-    pt: 'Organização e preparação de dados para garantir análises confiáveis e consistentes.',
-    en: 'Organizing and preparing data to ensure reliable and consistent analyses.',
-    es: 'Organización y preparación de datos para garantizar análisis confiables y consistentes.',
-    fr: 'Organisation et préparation des données pour garantir des analyses fiables et cohérentes.'
-  },
-  
+
   'service.insights.title': {
     pt: 'Insights de Negócio',
     en: 'Business Insights',
@@ -207,6 +248,30 @@ const translations: Translations = {
     en: 'View on GitHub',
     es: 'Ver en GitHub',
     fr: 'Voir sur GitHub'
+  },
+  'portfolio.sales.title': {
+    pt: 'Sales Analysis - Olist Dataset',
+    en: 'Sales Analysis - Olist Dataset',
+    es: 'Sales Analysis - Dataset Olist',
+    fr: 'Sales Analysis - Dataset Olist'
+  },
+  'portfolio.sales.description': {
+    pt: 'Análise exploratória de dados de e-commerce usando Python e Pandas para identificar padrões de receita, categorias com melhor desempenho e tendências de vendas ao longo do tempo.',
+    en: 'Exploratory analysis of e-commerce data using Python and Pandas to identify revenue patterns, top-performing categories and sales trends over time.',
+    es: 'Análisis exploratorio de datos de e-commerce usando Python y Pandas para identificar patrones de ingresos, categorías con mejor desempeño y tendencias de ventas a lo largo del tiempo.',
+    fr: 'Analyse exploratoire de données e-commerce avec Python et Pandas pour identifier les tendances de revenus, les catégories les plus performantes et l\'évolution des ventes dans le temps.'
+  },
+  'portfolio.tech.dataAnalysis': {
+    pt: 'Análise de Dados',
+    en: 'Data Analysis',
+    es: 'Análisis de Datos',
+    fr: 'Analyse de Données'
+  },
+  'portfolio.tech.olistDataset': {
+    pt: 'Dataset Olist',
+    en: 'Olist Dataset',
+    es: 'Dataset Olist',
+    fr: 'Dataset Olist'
   },
   
   // Contact Section
@@ -258,6 +323,18 @@ const translations: Translations = {
     es: '¡Mensaje enviado con éxito!',
     fr: 'Message envoyé avec succès!'
   },
+  'contact.sending': {
+    pt: 'Enviando...',
+    en: 'Sending...',
+    es: 'Enviando...',
+    fr: 'Envoi...'
+  },
+  'contact.social': {
+    pt: 'Redes Sociais',
+    en: 'Social Media',
+    es: 'Redes Sociales',
+    fr: 'Réseaux Sociaux'
+  },
   
   // Newsletter
   'newsletter.title': {
@@ -283,6 +360,32 @@ const translations: Translations = {
     en: 'Subscribe',
     es: 'Suscribirse',
     fr: 'S\'abonner'
+  },
+
+  // Footer
+  'footer.tagline': {
+    pt: 'Análise de Dados • Business Intelligence • Analytics',
+    en: 'Data Analysis • Business Intelligence • Analytics',
+    es: 'Análisis de Datos • Business Intelligence • Analytics',
+    fr: 'Analyse de Données • Business Intelligence • Analytics'
+  },
+  'footer.navigation': {
+    pt: 'Navegação',
+    en: 'Navigation',
+    es: 'Navegación',
+    fr: 'Navigation'
+  },
+  'footer.connect': {
+    pt: 'Conecte-se',
+    en: 'Connect',
+    es: 'Conéctate',
+    fr: 'Se Connecter'
+  },
+  'footer.rights': {
+    pt: 'Todos os direitos reservados.',
+    en: 'All rights reserved.',
+    es: 'Todos los derechos reservados.',
+    fr: 'Tous droits réservés.'
   }
 };
 

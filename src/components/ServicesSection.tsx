@@ -1,39 +1,41 @@
 
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
+import { BarChart3, BriefcaseBusiness, Lightbulb, LineChart, type LucideIcon } from 'lucide-react';
+
+type Service = {
+  titleKey: string;
+  descriptionKey: string;
+  icon: LucideIcon;
+  gradient: string;
+};
 
 const ServicesSection = () => {
   const { t } = useTranslation();
 
-  const services = [
+  const services: Service[] = [
     {
       titleKey: 'service.eda.title',
       descriptionKey: 'service.eda.description',
-      icon: '📊',
+      icon: BarChart3,
       gradient: 'from-neon-green/20 to-neon-blue/20'
     },
     {
       titleKey: 'service.visualization.title',
       descriptionKey: 'service.visualization.description',
-      icon: '📈',
+      icon: LineChart,
       gradient: 'from-purple-500/20 to-neon-green/20'
-    },
-    {
-      titleKey: 'service.cleaning.title',
-      descriptionKey: 'service.cleaning.description',
-      icon: '📦',
-      gradient: 'from-neon-green/20 to-neon-blue/20'
     },
     {
       titleKey: 'service.bi.title',
       descriptionKey: 'service.bi.description',
-      icon: '💼',
+      icon: BriefcaseBusiness,
       gradient: 'from-neon-blue/20 to-purple-500/20'
     },
     {
       titleKey: 'service.insights.title',
       descriptionKey: 'service.insights.description',
-      icon: '💡',
+      icon: Lightbulb,
       gradient: 'from-purple-500/20 to-neon-green/20'
     }
   ];
@@ -51,16 +53,19 @@ const ServicesSection = () => {
           <div className="w-24 h-1 bg-neon-green mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+
+            return (
             <div
               key={service.titleKey}
-              className={`bg-gradient-to-br ${service.gradient} rounded-xl p-8 border border-dark-300/30 hover-lift group`}
+              className={`bg-gradient-to-br ${service.gradient} rounded-xl p-8 border border-dark-300/30 hover-lift group transition-all duration-300 hover:border-neon-green/40`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green transition-all duration-300 group-hover:scale-110 group-hover:bg-neon-green group-hover:text-dark-50">
+                  <Icon size={28} strokeWidth={1.8} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-neon-green transition-colors">
                   {t(service.titleKey)}
@@ -70,7 +75,8 @@ const ServicesSection = () => {
                 </p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
