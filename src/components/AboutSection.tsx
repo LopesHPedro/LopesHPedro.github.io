@@ -22,7 +22,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-dark-100">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 slow-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('about.title')}
           </h2>
@@ -31,7 +31,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Profile Image */}
-          <div className="animate-slide-in">
+          <div className="slow-reveal">
             <div className="relative">
               <img
                 src="https://github.com/LopesHPedro.png?size=400"
@@ -44,7 +44,7 @@ const AboutSection = () => {
           </div>
 
           {/* About Content */}
-          <div className="animate-fade-in">
+          <div className="slow-reveal" style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
                 {t('about.bio')}
@@ -71,7 +71,7 @@ const AboutSection = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20">
+        <div className="mt-20 slow-reveal">
           <h3 className="text-2xl font-bold text-center mb-12 gradient-text">
             {t('about.skills')}
           </h3>
@@ -83,8 +83,8 @@ const AboutSection = () => {
               return (
               <div
                 key={skillGroup.categoryKey}
-                className="glass-effect rounded-lg p-6 hover-lift"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="glass-effect rounded-lg p-6 hover-lift slow-reveal"
+                style={{ '--reveal-delay': `${index * 120}ms` } as React.CSSProperties}
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-md border border-neon-green/30 bg-dark-200 text-neon-green">

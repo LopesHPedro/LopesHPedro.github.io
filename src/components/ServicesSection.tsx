@@ -43,7 +43,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 slow-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('services.title')}
           </h2>
@@ -60,8 +60,8 @@ const ServicesSection = () => {
             return (
             <div
               key={service.titleKey}
-              className={`bg-gradient-to-br ${service.gradient} rounded-xl p-8 border border-dark-300/30 hover-lift group transition-all duration-300 hover:border-neon-green/40`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`slow-reveal bg-gradient-to-br ${service.gradient} rounded-xl p-8 border border-dark-300/30 hover-lift group transition-all duration-300 hover:border-neon-green/40`}
+              style={{ '--reveal-delay': `${index * 130}ms` } as React.CSSProperties}
             >
               <div className="text-center">
                 <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green transition-all duration-300 group-hover:scale-110 group-hover:bg-neon-green group-hover:text-dark-50">

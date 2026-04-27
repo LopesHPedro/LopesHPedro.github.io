@@ -46,7 +46,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 slow-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('contact.title')}
           </h2>
@@ -58,7 +58,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="animate-slide-in">
+          <div className="slow-reveal">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -139,7 +139,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Info & Newsletter */}
-          <div className="animate-fade-in space-y-8">
+          <div className="slow-reveal space-y-8" style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
             {/* Social Links */}
             <div className="glass-effect rounded-lg p-8">
               <h3 className="text-xl font-bold text-neon-green mb-6">

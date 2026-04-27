@@ -21,7 +21,7 @@ const PortfolioSection = () => {
   return (
     <section id="portfolio" className="section-padding bg-dark-100">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 slow-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('portfolio.title')}
           </h2>
@@ -36,8 +36,8 @@ const PortfolioSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="glass-effect rounded-xl overflow-hidden hover-lift group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="glass-effect rounded-xl overflow-hidden hover-lift group slow-reveal"
+              style={{ '--reveal-delay': `${index * 120}ms` } as React.CSSProperties}
             >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-neon-green/20 to-neon-blue/20 flex items-center justify-center">

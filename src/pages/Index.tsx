@@ -7,8 +7,11 @@ import ServicesSection from '../components/ServicesSection';
 import PortfolioSection from '../components/PortfolioSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Index = () => {
+  useScrollReveal();
+
   return (
     <div className="min-h-screen bg-dark-50 text-white">
       <Navigation />
