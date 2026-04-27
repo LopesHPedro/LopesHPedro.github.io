@@ -22,17 +22,17 @@ const PortfolioSection = () => {
     <section id="portfolio" className="section-padding bg-dark-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 slow-reveal">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
             {t('portfolio.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-400 sm:text-xl">
             {t('portfolio.subtitle')}
           </p>
           <div className="w-24 h-1 bg-neon-green mx-auto mt-6"></div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 max-w-xl mx-auto">
+        <div className="mx-auto grid max-w-xl grid-cols-1">
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -40,7 +40,7 @@ const PortfolioSection = () => {
               style={{ '--reveal-delay': `${index * 120}ms` } as React.CSSProperties}
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-neon-green/20 to-neon-blue/20 flex items-center justify-center">
+              <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-neon-green/20 to-neon-blue/20 sm:h-48">
                 <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green">
                   <BarChart3 size={34} strokeWidth={1.8} />
                 </div>
@@ -61,8 +61,8 @@ const PortfolioSection = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-green transition-colors">
+              <div className="p-5 sm:p-6">
+                <h3 className="mb-3 text-lg font-bold text-white transition-colors group-hover:text-neon-green sm:text-xl">
                   {t(project.titleKey)}
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">

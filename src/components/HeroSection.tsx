@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Instagram, Image } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -16,42 +16,43 @@ const HeroSection = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/LopesHPedro', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/LopesHPedro/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' }
+    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' },
+    { icon: Image, href: 'https://vsco.co/lopeshpedro/gallery', label: 'VSCO' }
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-4 pt-20 pb-14 sm:px-6">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-neon-green/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute left-[-4rem] top-1/4 h-48 w-48 rounded-full bg-neon-green/20 blur-3xl animate-pulse sm:left-1/4 sm:h-64 sm:w-64"></div>
+        <div className="absolute bottom-1/4 right-[-6rem] h-64 w-64 rounded-full bg-neon-blue/20 blur-3xl animate-pulse delay-1000 sm:right-1/4 sm:h-96 sm:w-96"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-7xl text-center">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="mb-5 text-[clamp(2.7rem,13vw,4.8rem)] font-bold leading-[0.95] sm:mb-6">
             <span className="gradient-text">Pedro H. Lopes</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <h2 className="mx-auto mb-6 max-w-4xl text-lg leading-relaxed text-gray-300 sm:mb-8 sm:text-xl md:text-2xl">
             {t('hero.title')}
           </h2>
           
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto mb-9 max-w-3xl text-base leading-relaxed text-gray-400 sm:mb-12 sm:text-lg">
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+          <div className="mb-10 flex flex-col items-stretch justify-center gap-4 sm:mb-12 sm:flex-row sm:items-center sm:gap-6">
             <button
               onClick={() => scrollToSection('#portfolio')}
-              className="bg-neon-green text-dark-50 px-8 py-4 rounded-lg font-semibold hover:bg-neon-green/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-neon-green/25"
+              className="w-full rounded-lg bg-neon-green px-7 py-4 font-semibold text-dark-50 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-neon-green/90 hover:shadow-neon-green/25 sm:w-auto sm:px-8"
             >
               {t('hero.cta')}
             </button>
             
             <button
               onClick={() => scrollToSection('#contact')}
-              className="border border-neon-green text-neon-green px-8 py-4 rounded-lg font-semibold hover:bg-neon-green hover:text-dark-50 transition-all duration-300 hover:scale-105"
+              className="w-full rounded-lg border border-neon-green px-7 py-4 font-semibold text-neon-green transition-all duration-300 hover:scale-105 hover:bg-neon-green hover:text-dark-50 sm:w-auto sm:px-8"
             >
               {t('hero.contact')}
             </button>
@@ -81,9 +82,7 @@ const HeroSection = () => {
           onClick={() => scrollToSection('#about')}
           className="text-gray-400 hover:text-neon-green transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          <ArrowDown size={24} />
         </button>
       </div>
     </section>

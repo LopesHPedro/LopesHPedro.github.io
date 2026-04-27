@@ -44,30 +44,30 @@ const ServicesSection = () => {
     <section id="services" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 slow-reveal">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
             {t('services.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-400 sm:text-xl">
             {t('services.subtitle')}
           </p>
           <div className="w-24 h-1 bg-neon-green mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
 
             return (
             <div
               key={service.titleKey}
-              className={`slow-reveal bg-gradient-to-br ${service.gradient} rounded-xl p-8 border border-dark-300/30 hover-lift group transition-all duration-300 hover:border-neon-green/40`}
+              className={`slow-reveal bg-gradient-to-br ${service.gradient} rounded-xl border border-dark-300/30 p-6 hover-lift group transition-all duration-300 hover:border-neon-green/40 sm:p-8`}
               style={{ '--reveal-delay': `${index * 130}ms` } as React.CSSProperties}
             >
               <div className="text-center">
                 <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green transition-all duration-300 group-hover:scale-110 group-hover:bg-neon-green group-hover:text-dark-50">
                   <Icon size={28} strokeWidth={1.8} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-neon-green transition-colors">
+                <h3 className="mb-4 text-lg font-bold text-white transition-colors group-hover:text-neon-green sm:text-xl">
                   {t(service.titleKey)}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">

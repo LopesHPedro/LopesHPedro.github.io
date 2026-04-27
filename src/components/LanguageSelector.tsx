@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation, Language } from '../hooks/useTranslation';
 
 const LanguageSelector = () => {
   const { language, changeLanguage } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const selectorRef = useRef<HTMLDivElement>(null);
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'pt', name: 'Português', flag: '🇧🇷' },
@@ -15,20 +17,42 @@ const LanguageSelector = () => {
   const handleLanguageChange = (newLanguage: Language) => {
     console.log(`Changing language from ${language} to ${newLanguage}`);
     changeLanguage(newLanguage);
+    setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectorRef.current && !selectorRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <div className="relative group">
-      <div className="flex items-center space-x-1 cursor-pointer">
+    <div ref={selectorRef} className="relative">
+      <button
+        type="button"
+        onClick={() => setIsOpen((current) => !current)}
+        className="flex h-10 items-center gap-1 rounded-md px-2 transition-colors hover:bg-dark-200"
+        aria-expanded={isOpen}
+        aria-label="Select language"
+      >
         <span className="text-2xl">
           {languages.find(lang => lang.code === language)?.flag}
         </span>
-        <span className="text-sm text-gray-300 group-hover:text-neon-green transition-colors">
+        <span className="text-sm text-gray-300 transition-colors hover:text-neon-green">
           {language.toUpperCase()}
         </span>
-      </div>
+      </button>
       
-      <div className="absolute right-0 top-full mt-2 bg-dark-100 border border-dark-300 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 min-w-[150px]">
+      <div
+        className={`absolute right-0 top-full z-50 mt-2 min-w-[150px] rounded-lg border border-dark-300 bg-dark-100 shadow-lg transition-all duration-300 ${
+          isOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'
+        }`}
+      >
         {languages.map((lang) => (
           <button
             key={lang.code}

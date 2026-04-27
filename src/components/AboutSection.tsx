@@ -23,30 +23,30 @@ const AboutSection = () => {
     <section id="about" className="section-padding bg-dark-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 slow-reveal">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
             {t('about.title')}
           </h2>
           <div className="w-24 h-1 bg-neon-green mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Profile Image */}
           <div className="slow-reveal">
-            <div className="relative">
+            <div className="relative mx-auto max-w-[20rem]">
               <img
                 src="https://github.com/LopesHPedro.png?size=400"
                 alt="Pedro H. Lopes"
-                className="w-80 h-80 mx-auto rounded-full object-cover border border-neon-green/30 shadow-lg shadow-neon-green/10"
+                className="mx-auto aspect-square w-56 rounded-full border border-neon-green/30 object-cover shadow-lg shadow-neon-green/10 sm:w-72 lg:w-80"
               />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-neon-green/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-neon-blue/20 rounded-full blur-xl"></div>
+              <div className="absolute -right-2 -top-4 h-20 w-20 rounded-full bg-neon-green/20 blur-xl sm:-right-4 sm:h-24 sm:w-24"></div>
+              <div className="absolute -bottom-4 -left-2 h-24 w-24 rounded-full bg-neon-blue/20 blur-xl sm:-left-4 sm:h-32 sm:w-32"></div>
             </div>
           </div>
 
           {/* About Content */}
           <div className="slow-reveal" style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
             <div className="space-y-6">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base leading-relaxed text-gray-300 sm:text-lg">
                 {t('about.bio')}
               </p>
               
@@ -54,7 +54,7 @@ const AboutSection = () => {
                 <h3 className="text-xl font-semibold text-neon-green">
                   {t('about.education')}
                 </h3>
-                <div className="bg-dark-200 p-4 rounded-lg border border-dark-300">
+                <div className="rounded-lg border border-dark-300 bg-dark-200 p-4">
                   <p className="text-gray-300">
                     <span className="font-medium">{t('about.degree')}</span>
                     <br />
@@ -63,9 +63,6 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <button className="bg-neon-green text-dark-50 px-6 py-3 rounded-lg font-semibold hover:bg-neon-green/90 transition-all duration-300 hover:scale-105">
-                {t('about.downloadCV')}
-              </button>
             </div>
           </div>
         </div>
@@ -76,21 +73,21 @@ const AboutSection = () => {
             {t('about.skills')}
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {skills.map((skillGroup, index) => {
               const Icon = skillGroup.icon;
 
               return (
               <div
                 key={skillGroup.categoryKey}
-                className="glass-effect rounded-lg p-6 hover-lift slow-reveal"
+                className="glass-effect rounded-lg p-5 hover-lift slow-reveal sm:p-6"
                 style={{ '--reveal-delay': `${index * 120}ms` } as React.CSSProperties}
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-md border border-neon-green/30 bg-dark-200 text-neon-green">
                     <Icon size={20} strokeWidth={1.8} />
                   </span>
-                  <h4 className="text-lg font-semibold text-neon-green">
+                  <h4 className="text-base font-semibold text-neon-green sm:text-lg">
                     {t(skillGroup.categoryKey)}
                   </h4>
                 </div>

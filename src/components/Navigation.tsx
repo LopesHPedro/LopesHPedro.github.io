@@ -66,12 +66,12 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-6 flex items-baseline gap-3 lg:ml-10 lg:gap-6 xl:gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => scrollToSection(item.href)}
-                  className={`group relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:text-neon-green ${
+                  className={`group relative px-2 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:text-neon-green lg:px-3 ${
                     activeSection === item.href ? 'text-neon-green' : 'text-gray-300'
                   }`}
                 >
@@ -87,14 +87,14 @@ const Navigation = () => {
           </div>
 
           {/* Language Selector & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <LanguageSelector />
             
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-gray-300 transition-all duration-300 hover:scale-110 hover:text-neon-green focus:outline-none focus:text-neon-green"
+                className="flex h-10 w-10 items-center justify-center rounded-md text-gray-300 transition-all duration-300 hover:scale-110 hover:bg-dark-200 hover:text-neon-green focus:outline-none focus:text-neon-green"
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

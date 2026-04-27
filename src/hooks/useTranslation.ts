@@ -96,12 +96,6 @@ const translations: Translations = {
     es: 'Habilidades Técnicas',
     fr: 'Compétences Techniques'
   },
-  'about.downloadCV': {
-    pt: 'Baixar Currículo',
-    en: 'Download CV',
-    es: 'Descargar CV',
-    fr: 'Télécharger CV'
-  },
   'about.degree': {
     pt: 'Graduação em Sistemas de Informação',
     en: 'Bachelor\'s Degree in Information Systems',
@@ -318,10 +312,10 @@ const translations: Translations = {
     fr: 'Envoyer le Message'
   },
   'contact.success': {
-    pt: 'Mensagem enviada com sucesso!',
-    en: 'Message sent successfully!',
-    es: '¡Mensaje enviado con éxito!',
-    fr: 'Message envoyé avec succès!'
+    pt: 'Seu aplicativo de e-mail foi aberto com a mensagem pronta para envio.',
+    en: 'Your email app was opened with the message ready to send.',
+    es: 'Tu aplicación de email se abrió con el mensaje listo para enviar.',
+    fr: 'Votre application e-mail a été ouverte avec le message prêt à envoyer.'
   },
   'contact.sending': {
     pt: 'Enviando...',
@@ -335,31 +329,35 @@ const translations: Translations = {
     es: 'Redes Sociales',
     fr: 'Réseaux Sociaux'
   },
-  
-  // Newsletter
-  'newsletter.title': {
-    pt: 'Newsletter',
-    en: 'Newsletter',
-    es: 'Newsletter',
-    fr: 'Newsletter'
+  'contact.emailProtected': {
+    pt: 'Use o formulário para entrar em contato.',
+    en: 'Use the form to get in touch.',
+    es: 'Usa el formulario para entrar en contacto.',
+    fr: 'Utilisez le formulaire pour me contacter.'
   },
-  'newsletter.description': {
-    pt: 'Receba insights sobre Análise de Dados e atualizações dos meus projetos',
-    en: 'Receive Data Analysis insights and updates on my projects',
-    es: 'Reciba insights sobre Análisis de Datos y actualizaciones de mis proyectos',
-    fr: 'Recevez des insights sur l\'Analyse de Données et des mises à jour sur mes projets'
+  'contact.errorRequired': {
+    pt: 'Preencha todos os campos obrigatórios.',
+    en: 'Please fill in all required fields.',
+    es: 'Completa todos los campos obligatorios.',
+    fr: 'Veuillez remplir tous les champs obligatoires.'
   },
-  'newsletter.placeholder': {
-    pt: 'Seu email',
-    en: 'Your email',
-    es: 'Tu email',
-    fr: 'Votre email'
+  'contact.errorEmail': {
+    pt: 'Digite apenas um e-mail válido.',
+    en: 'Enter only one valid email address.',
+    es: 'Ingresa solo un email válido.',
+    fr: 'Saisissez une seule adresse e-mail valide.'
   },
-  'newsletter.subscribe': {
-    pt: 'Inscrever-se',
-    en: 'Subscribe',
-    es: 'Suscribirse',
-    fr: 'S\'abonner'
+  'contact.errorSpam': {
+    pt: 'Sua mensagem parece spam. Revise o conteúdo e tente novamente.',
+    en: 'Your message looks like spam. Please review it and try again.',
+    es: 'Tu mensaje parece spam. Revísalo e inténtalo de nuevo.',
+    fr: 'Votre message ressemble à du spam. Vérifiez-le puis réessayez.'
+  },
+  'contact.errorCooldown': {
+    pt: 'Aguarde um pouco antes de enviar outra mensagem.',
+    en: 'Please wait before sending another message.',
+    es: 'Espera un poco antes de enviar otro mensaje.',
+    fr: 'Veuillez attendre avant d\'envoyer un autre message.'
   },
 
   // Footer
