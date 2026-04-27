@@ -9,7 +9,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/LopesHPedro', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/LopesHPedro/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/lopesh_pedro/', label: 'Instagram' }
+    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' }
   ];
 
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
               Pedro H. Lopes
             </button>
             <p className="text-gray-400 text-sm">
-              Data Science • Machine Learning • Analytics
+              Data Analysis • Business Intelligence • Analytics
             </p>
           </div>
 

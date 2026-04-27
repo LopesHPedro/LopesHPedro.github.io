@@ -6,10 +6,10 @@ const AboutSection = () => {
   const { t } = useTranslation();
 
   const skills = [
-    { category: 'Languages', items: ['Python'] },
-    { category: 'ML/AI', items: ['Pandas'] },
-    { category: 'Visualization', items: ['Matplotlib'] },
-    { category: 'Tools', items: ['Jupyter', 'Git'] }
+    { category: '📊 Data Analysis', items: ['Excel', 'SQL', 'Python (pandas)'] },
+    { category: '📈 Data Visualization', items: ['Power BI', 'Matplotlib'] },
+    { category: '🧠 Business Skills', items: ['Análise de métricas', 'Geração de insights', 'Tomada de decisão orientada a dados'] },
+    { category: '🛠️ Tools', items: ['Jupyter', 'Git'] }
   ];
 
   return (
@@ -23,14 +23,14 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="animate-slide-in">
             <div className="relative">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-neon-green/20 to-neon-blue/20 rounded-full flex items-center justify-center border border-neon-green/30">
-                <div className="text-6xl text-gray-400">
-                  📊
-                </div>
-              </div>
+              <img
+                src="https://github.com/LopesHPedro.png?size=400"
+                alt="Pedro H. Lopes"
+                className="w-80 h-80 mx-auto rounded-full object-cover border border-neon-green/30 shadow-lg shadow-neon-green/10"
+              />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-neon-green/20 rounded-full blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-neon-blue/20 rounded-full blur-xl"></div>
             </div>

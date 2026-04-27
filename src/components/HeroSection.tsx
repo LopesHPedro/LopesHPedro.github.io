@@ -16,7 +16,7 @@ const HeroSection = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/LopesHPedro', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/LopesHPedro/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/lopesh_pedro/', label: 'Instagram' }
+    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' }
   ];
 
   return (

@@ -10,10 +10,10 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'Roadmap Ciência de Dados - Study Journey',
-      description: 'Um roadmap completo e estruturado para aprender Ciência de Dados, desde fundamentos até tópicos avançados.',
+      title: 'Roadmap Análise de Dados - Study Journey',
+      description: 'Um roadmap completo e estruturado para aprender Análise de Dados, desde fundamentos até tópicos avançados.',
       image: '/placeholder.svg',
-      technologies: ['Python', 'Jupyter', 'Data Science', 'Machine Learning'],
+      technologies: ['Python', 'Jupyter', 'Data Analysis', 'Dashboards'],
       category: 'education',
       githubUrl: 'https://github.com/LopesHPedro/roadmap-ciencia-dados-study-journey',
       liveUrl: ''
@@ -30,11 +30,11 @@ const PortfolioSection = () => {
     },
     {
       id: 3,
-      title: 'Modelo Preditivo - Churn',
-      description: 'Desenvolvimento de modelo de machine learning para prever churn de clientes com 85% de acurácia.',
+      title: 'Análise de Retenção de Clientes',
+      description: 'Análise de métricas de clientes para identificar padrões de cancelamento e oportunidades de retenção.',
       image: '/placeholder.svg',
-      technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Feature Engineering'],
-      category: 'ml',
+      technologies: ['Python', 'Pandas', 'Power BI', 'Business Insights'],
+      category: 'insights',
       githubUrl: '#',
       liveUrl: ''
     }
@@ -43,7 +43,7 @@ const PortfolioSection = () => {
   const categories = [
     { key: 'all', label: 'Todos' },
     { key: 'analysis', label: 'Análise' },
-    { key: 'ml', label: 'Machine Learning' },
+    { key: 'insights', label: 'Insights' },
     { key: 'education', label: 'Educação' }
   ];
 

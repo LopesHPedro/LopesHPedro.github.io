@@ -13,33 +13,27 @@ const ServicesSection = () => {
       gradient: 'from-neon-green/20 to-neon-blue/20'
     },
     {
-      titleKey: 'service.ml.title',
-      descriptionKey: 'service.ml.description',
-      icon: '🤖',
-      gradient: 'from-neon-blue/20 to-purple-500/20'
-    },
-    {
       titleKey: 'service.visualization.title',
       descriptionKey: 'service.visualization.description',
       icon: '📈',
       gradient: 'from-purple-500/20 to-neon-green/20'
     },
     {
-      titleKey: 'service.bi.title',
-      descriptionKey: 'service.bi.description',
-      icon: '💼',
+      titleKey: 'service.cleaning.title',
+      descriptionKey: 'service.cleaning.description',
+      icon: '📦',
       gradient: 'from-neon-green/20 to-neon-blue/20'
     },
     {
-      titleKey: 'service.consulting.title',
-      descriptionKey: 'service.consulting.description',
-      icon: '💡',
+      titleKey: 'service.bi.title',
+      descriptionKey: 'service.bi.description',
+      icon: '💼',
       gradient: 'from-neon-blue/20 to-purple-500/20'
     },
     {
-      titleKey: 'service.predictive.title',
-      descriptionKey: 'service.predictive.description',
-      icon: '🔮',
+      titleKey: 'service.insights.title',
+      descriptionKey: 'service.insights.description',
+      icon: '💡',
       gradient: 'from-purple-500/20 to-neon-green/20'
     }
   ];
