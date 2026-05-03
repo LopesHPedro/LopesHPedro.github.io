@@ -1,20 +1,36 @@
 
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { BarChart3, Github } from 'lucide-react';
+import { BarChart3, Database, Github, type LucideIcon } from 'lucide-react';
+
+type Project = {
+  id: number;
+  titleKey: string;
+  descriptionKey: string;
+  technologies: string[];
+  githubUrl: string;
+  icon: LucideIcon;
+};
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       titleKey: 'portfolio.sales.title',
       descriptionKey: 'portfolio.sales.description',
-      image: '/placeholder.svg',
       technologies: ['Python', 'Pandas', 'portfolio.tech.dataAnalysis', 'portfolio.tech.olistDataset'],
       githubUrl: 'https://github.com/LopesHPedro/sales-analysis',
-      liveUrl: ''
+      icon: BarChart3
+    },
+    {
+      id: 2,
+      titleKey: 'portfolio.globalmart.title',
+      descriptionKey: 'portfolio.globalmart.description',
+      technologies: ['Python', 'SQL', 'Power BI', 'portfolio.tech.syntheticData', 'portfolio.tech.businessIntelligence'],
+      githubUrl: 'https://github.com/LopesHPedro/globalmart-data-analysis',
+      icon: Database
     }
   ];
 
@@ -32,8 +48,11 @@ const PortfolioSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="mx-auto grid max-w-xl grid-cols-1">
-          {projects.map((project, index) => (
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+          {projects.map((project, index) => {
+            const Icon = project.icon;
+
+            return (
             <div
               key={project.id}
               className="glass-effect rounded-xl overflow-hidden hover-lift group slow-reveal"
@@ -42,7 +61,7 @@ const PortfolioSection = () => {
               {/* Project Image */}
               <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-neon-green/20 to-neon-blue/20 sm:h-48">
                 <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-neon-green/30 bg-dark-100/60 text-neon-green">
-                  <BarChart3 size={34} strokeWidth={1.8} />
+                  <Icon size={34} strokeWidth={1.8} />
                 </div>
                 <div className="absolute inset-0 bg-dark-50/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
@@ -97,7 +116,8 @@ const PortfolioSection = () => {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -255,6 +255,18 @@ const translations: Translations = {
     es: 'Análisis exploratorio de datos de e-commerce usando Python y Pandas para identificar patrones de ingresos, categorías con mejor desempeño y tendencias de ventas a lo largo del tiempo.',
     fr: 'Analyse exploratoire de données e-commerce avec Python et Pandas pour identifier les tendances de revenus, les catégories les plus performantes et l\'évolution des ventes dans le temps.'
   },
+  'portfolio.globalmart.title': {
+    pt: 'GlobalMart Data Analysis',
+    en: 'GlobalMart Data Analysis',
+    es: 'GlobalMart Data Analysis',
+    fr: 'GlobalMart Data Analysis'
+  },
+  'portfolio.globalmart.description': {
+    pt: 'Projeto fictício de e-commerce global para criar dados realistas com problemas de negócio, limpar bases sujas e evoluir análises com SQL, Python, Power BI, estatística e machine learning.',
+    en: 'Fictional global e-commerce project built to generate realistic business data, clean messy datasets and evolve analyses with SQL, Python, Power BI, statistics and machine learning.',
+    es: 'Proyecto ficticio de e-commerce global para crear datos realistas con problemas de negocio, limpiar bases sucias y evolucionar análisis con SQL, Python, Power BI, estadística y machine learning.',
+    fr: 'Projet fictif d\'e-commerce global pour générer des données métier réalistes, nettoyer des bases imparfaites et développer des analyses avec SQL, Python, Power BI, statistiques et machine learning.'
+  },
   'portfolio.tech.dataAnalysis': {
     pt: 'Análise de Dados',
     en: 'Data Analysis',
@@ -266,6 +278,18 @@ const translations: Translations = {
     en: 'Olist Dataset',
     es: 'Dataset Olist',
     fr: 'Dataset Olist'
+  },
+  'portfolio.tech.syntheticData': {
+    pt: 'Dados Sintéticos',
+    en: 'Synthetic Data',
+    es: 'Datos Sintéticos',
+    fr: 'Données Synthétiques'
+  },
+  'portfolio.tech.businessIntelligence': {
+    pt: 'Business Intelligence',
+    en: 'Business Intelligence',
+    es: 'Business Intelligence',
+    fr: 'Business Intelligence'
   },
   
   // Contact Section
