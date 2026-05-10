@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { BarChart3, Brain, LineChart, Wrench, type LucideIcon } from 'lucide-react';
+import { BarChart3, Bot, Brain, LineChart, Wrench, type LucideIcon } from 'lucide-react';
 
 type SkillGroup = {
   categoryKey: string;
@@ -16,6 +16,7 @@ const AboutSection = () => {
     { categoryKey: 'skills.dataAnalysis', icon: BarChart3, items: ['Excel', 'SQL', 'Python (pandas)'] },
     { categoryKey: 'skills.dataVisualization', icon: LineChart, items: ['Power BI', 'Matplotlib'] },
     { categoryKey: 'skills.business', icon: Brain, items: ['skills.metrics', 'skills.insights', 'skills.decision'] },
+    { categoryKey: 'skills.aiAutomation', icon: Bot, items: ['skills.aiAssistedAnalysis', 'skills.workflowAutomation', 'skills.prompting'] },
     { categoryKey: 'skills.tools', icon: Wrench, items: ['Jupyter', 'Git'] }
   ];
 
@@ -73,7 +74,7 @@ const AboutSection = () => {
             {t('about.skills')}
           </h3>
           
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
             {skills.map((skillGroup, index) => {
               const Icon = skillGroup.icon;
 

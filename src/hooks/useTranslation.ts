@@ -79,10 +79,10 @@ const translations: Translations = {
     fr: 'À Propos de Moi'
   },
   'about.bio': {
-    pt: 'Sou um estudante apaixonado por transformar dados complexos em soluções práticas e insights acionáveis. Tenho foco em análise de métricas, tratamento de dados, visualização e apoio à tomada de decisão orientada a dados.',
-    en: 'I am a student passionate about transforming complex data into practical solutions and actionable insights. I focus on metrics analysis, data preparation, visualization and supporting data-driven decision making.',
-    es: 'Soy un estudiante apasionado por transformar datos complejos en soluciones prácticas e insights accionables. Me enfoco en análisis de métricas, tratamiento de datos, visualización y apoyo a la toma de decisiones basada en datos.',
-    fr: 'Je suis un étudiant passionné par la transformation de données complexes en solutions pratiques et insights exploitables. Je me concentre sur l\'analyse des métriques, la préparation des données, la visualisation et l\'aide à la prise de décision basée sur les données.'
+    pt: 'Sou um estudante focado em transformar dados complexos em soluções práticas e insights acionáveis. Atuo com análise de métricas, tratamento de dados, visualização e apoio à tomada de decisão orientada a dados. Também estudo aplicações de IA como ferramenta para automatizar análises, acelerar investigações e apoiar a geração de insights.',
+    en: 'I am a student focused on turning complex data into practical solutions and actionable insights. I work with metrics analysis, data preparation, visualization and support for data-driven decision making. I also study AI applications as a tool to automate analyses, speed up investigations and support insight generation.',
+    es: 'Soy un estudiante enfocado en transformar datos complejos en soluciones prácticas e insights accionables. Trabajo con análisis de métricas, tratamiento de datos, visualización y apoyo a la toma de decisiones basada en datos. También estudio aplicaciones de IA como herramienta para automatizar análisis, acelerar investigaciones y apoyar la generación de insights.',
+    fr: 'Je suis un étudiant axé sur la transformation de données complexes en solutions pratiques et insights exploitables. Je travaille avec l\'analyse des métriques, la préparation des données, la visualisation et l\'aide à la prise de décision basée sur les données. J\'étudie aussi les applications de l\'IA comme outil pour automatiser les analyses, accélérer les investigations et soutenir la génération d\'insights.'
   },
   'about.education': {
     pt: 'Formação Acadêmica',
@@ -132,6 +132,12 @@ const translations: Translations = {
     es: 'Herramientas',
     fr: 'Outils'
   },
+  'skills.aiAutomation': {
+    pt: 'IA Aplicada & Automação',
+    en: 'Applied AI & Automation',
+    es: 'IA Aplicada y Automatización',
+    fr: 'IA Appliquée & Automatisation'
+  },
   'skills.metrics': {
     pt: 'Análise de métricas',
     en: 'Metrics analysis',
@@ -149,6 +155,24 @@ const translations: Translations = {
     en: 'Data-driven decision making',
     es: 'Toma de decisiones basada en datos',
     fr: 'Prise de décision basée sur les données'
+  },
+  'skills.aiAssistedAnalysis': {
+    pt: 'Análise assistida por IA',
+    en: 'AI-assisted analysis',
+    es: 'Análisis asistido por IA',
+    fr: 'Analyse assistée par IA'
+  },
+  'skills.workflowAutomation': {
+    pt: 'Automação de fluxos analíticos',
+    en: 'Analytical workflow automation',
+    es: 'Automatización de flujos analíticos',
+    fr: 'Automatisation des flux analytiques'
+  },
+  'skills.prompting': {
+    pt: 'Prompting para tarefas de dados',
+    en: 'Prompting for data tasks',
+    es: 'Prompting para tareas de datos',
+    fr: 'Prompting pour tâches data'
   },
   
   // Services Section
@@ -353,12 +377,6 @@ const translations: Translations = {
     es: 'Tu aplicación de email se abrió con el mensaje listo para enviar.',
     fr: 'Votre application e-mail a été ouverte avec le message prêt à envoyer.'
   },
-  'contact.sending': {
-    pt: 'Enviando...',
-    en: 'Sending...',
-    es: 'Enviando...',
-    fr: 'Envoi...'
-  },
   'contact.social': {
     pt: 'Redes Sociais',
     en: 'Social Media',
@@ -454,16 +472,12 @@ export const useTranslation = () => {
     globalLanguage = newLanguage;
     localStorage.setItem('preferred-language', newLanguage);
     
-    // Notify all components about the language change
     languageListeners.forEach(listener => listener(newLanguage));
-    
-    console.log(`Language changed to: ${newLanguage}`);
   };
 
   const t = (key: string): string => {
     const translation = translations[key]?.[language];
     if (!translation) {
-      console.warn(`Translation missing for key: ${key} in language: ${language}`);
       return key;
     }
     return translation;

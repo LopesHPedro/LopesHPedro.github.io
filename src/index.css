@@ -4,46 +4,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 15 15 15;
-    --foreground: 245 245 245;
-
-    --card: 26 26 26;
-    --card-foreground: 245 245 245;
-
-    --popover: 26 26 26;
-    --popover-foreground: 245 245 245;
-
-    --primary: 0 255 136;
-    --primary-foreground: 15 15 15;
-
-    --secondary: 64 64 64;
-    --secondary-foreground: 245 245 245;
-
-    --muted: 38 38 38;
-    --muted-foreground: 163 163 163;
-
-    --accent: 0 255 136;
-    --accent-foreground: 15 15 15;
-
-    --destructive: 239 68 68;
-    --destructive-foreground: 245 245 245;
-
-    --border: 64 64 64;
-    --input: 38 38 38;
-    --ring: 0 255 136;
-
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-dark-50 text-foreground font-sans overflow-x-hidden;
+    @apply bg-dark-50 text-dark-900 font-sans overflow-x-hidden;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 

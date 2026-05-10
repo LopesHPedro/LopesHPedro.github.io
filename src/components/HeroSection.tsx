@@ -1,7 +1,7 @@
 
-import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { ArrowDown, Github, Linkedin, Instagram, Image } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import { socialLinks } from '../data/socialLinks';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -13,16 +13,8 @@ const HeroSection = () => {
     }
   };
 
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/LopesHPedro', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/LopesHPedro/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' },
-    { icon: Image, href: 'https://vsco.co/lopeshpedro/gallery', label: 'VSCO' }
-  ];
-
   return (
     <section id="home" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-4 pt-20 pb-14 sm:px-6">
-      {/* Background Animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute left-[-4rem] top-1/4 h-48 w-48 rounded-full bg-neon-green/20 blur-3xl animate-pulse sm:left-1/4 sm:h-64 sm:w-64"></div>
         <div className="absolute bottom-1/4 right-[-6rem] h-64 w-64 rounded-full bg-neon-blue/20 blur-3xl animate-pulse delay-1000 sm:right-1/4 sm:h-96 sm:w-96"></div>
@@ -58,7 +50,6 @@ const HeroSection = () => {
             </button>
           </div>
           
-          {/* Social Links */}
           <div className="flex items-center justify-center space-x-6">
             {socialLinks.map((social) => (
               <a
@@ -76,7 +67,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={() => scrollToSection('#about')}

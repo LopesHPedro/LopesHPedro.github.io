@@ -15,7 +15,6 @@ const LanguageSelector = () => {
   ];
 
   const handleLanguageChange = (newLanguage: Language) => {
-    console.log(`Changing language from ${language} to ${newLanguage}`);
     changeLanguage(newLanguage);
     setIsOpen(false);
   };

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import { Github, Linkedin, Instagram, Image } from 'lucide-react';
+import { socialLinks } from '../data/socialLinks';
 
 const CONTACT_EMAIL_PARTS = ['pedro_hlopes', 'outlook', 'com'];
 const SUBMIT_COOLDOWN_MS = 60_000;
@@ -35,7 +35,6 @@ const ContactSection = () => {
     message: '',
     company: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -46,7 +45,7 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
 
@@ -82,8 +81,6 @@ const ContactSection = () => {
       return;
     }
 
-    setIsSubmitting(true);
-
     const mailSubject = encodeURIComponent(subject);
     const mailBody = encodeURIComponent(
       `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`
@@ -92,7 +89,6 @@ const ContactSection = () => {
     localStorage.setItem('last-contact-submit', String(Date.now()));
     window.location.href = `mailto:${getContactEmail()}?subject=${mailSubject}&body=${mailBody}`;
 
-    setIsSubmitting(false);
     setShowSuccess(true);
     setFormData({ name: '', email: '', subject: '', message: '', company: '' });
 
@@ -100,13 +96,6 @@ const ContactSection = () => {
       setShowSuccess(false);
     }, 5000);
   };
-
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/LopesHPedro', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/LopesHPedro/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/hlopespedro/', label: 'Instagram' },
-    { icon: Image, href: 'https://vsco.co/lopeshpedro/gallery', label: 'VSCO' }
-  ];
 
   return (
     <section id="contact" className="section-padding">
@@ -123,7 +112,6 @@ const ContactSection = () => {
 
         <div className="slow-reveal glass-effect overflow-hidden rounded-xl border border-dark-300/50">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]">
-            {/* Contact Form */}
             <div className="border-b border-dark-300/50 p-5 sm:p-8 lg:border-b-0 lg:border-r">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <input
@@ -201,10 +189,9 @@ const ContactSection = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full rounded-lg bg-neon-green px-6 py-3.5 font-semibold text-dark-50 transition-all duration-300 hover:scale-105 hover:bg-neon-green/90 disabled:cursor-not-allowed disabled:opacity-50 sm:px-8 sm:py-4"
+                  className="w-full rounded-lg bg-neon-green px-6 py-3.5 font-semibold text-dark-50 transition-all duration-300 hover:scale-105 hover:bg-neon-green/90 sm:px-8 sm:py-4"
                 >
-                  {isSubmitting ? t('contact.sending') : t('contact.send')}
+                  {t('contact.send')}
                 </button>
               </form>
 
@@ -214,7 +201,6 @@ const ContactSection = () => {
                 </div>
               )}
 
-              {/* Success Message */}
               {showSuccess && (
                 <div className="mt-6 bg-neon-green/20 border border-neon-green text-neon-green px-4 py-3 rounded-lg animate-fade-in">
                   {t('contact.success')}
@@ -222,7 +208,6 @@ const ContactSection = () => {
               )}
             </div>
 
-            {/* Contact Info */}
             <div className="bg-dark-100/40 p-5 sm:p-8">
               <div className="flex h-full flex-col justify-between gap-8">
                 <div>
