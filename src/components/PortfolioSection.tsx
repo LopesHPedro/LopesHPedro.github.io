@@ -28,7 +28,7 @@ const PortfolioSection = () => {
       id: 2,
       titleKey: 'portfolio.globalmart.title',
       descriptionKey: 'portfolio.globalmart.description',
-      technologies: ['Python', 'SQL', 'Power BI', 'portfolio.tech.syntheticData', 'portfolio.tech.businessIntelligence'],
+      technologies: ['Python', 'SQL', 'Power BI', 'portfolio.tech.syntheticData', 'portfolio.tech.aiWorkers', 'portfolio.tech.automation'],
       githubUrl: 'https://github.com/LopesHPedro/globalmart-data-analysis',
       icon: Database
     }

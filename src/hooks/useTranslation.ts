@@ -256,16 +256,16 @@ const translations: Translations = {
     fr: 'Analyse exploratoire de données e-commerce avec Python et Pandas pour identifier les tendances de revenus, les catégories les plus performantes et l\'évolution des ventes dans le temps.'
   },
   'portfolio.globalmart.title': {
-    pt: 'GlobalMart Data Analysis',
-    en: 'GlobalMart Data Analysis',
-    es: 'GlobalMart Data Analysis',
-    fr: 'GlobalMart Data Analysis'
+    pt: 'GlobalMart Data & AI Ecosystem',
+    en: 'GlobalMart Data & AI Ecosystem',
+    es: 'GlobalMart Data & AI Ecosystem',
+    fr: 'GlobalMart Data & AI Ecosystem'
   },
   'portfolio.globalmart.description': {
-    pt: 'Projeto fictício de e-commerce global para criar dados realistas com problemas de negócio, limpar bases sujas e evoluir análises com SQL, Python, Power BI, estatística e machine learning.',
-    en: 'Fictional global e-commerce project built to generate realistic business data, clean messy datasets and evolve analyses with SQL, Python, Power BI, statistics and machine learning.',
-    es: 'Proyecto ficticio de e-commerce global para crear datos realistas con problemas de negocio, limpiar bases sucias y evolucionar análisis con SQL, Python, Power BI, estadística y machine learning.',
-    fr: 'Projet fictif d\'e-commerce global pour générer des données métier réalistes, nettoyer des bases imparfaites et développer des analyses avec SQL, Python, Power BI, statistiques et machine learning.'
+    pt: 'Ecossistema modular de dados e IA para um e-commerce global fictício, cobrindo geração de dados sintéticos, limpeza, modelagem, análise de negócio, dashboards, automação e AI workers analíticos.',
+    en: 'Modular data and AI ecosystem for a fictional global e-commerce company, covering synthetic data generation, cleaning, modeling, business analysis, dashboards, automation and analytical AI workers.',
+    es: 'Ecosistema modular de datos e IA para un e-commerce global ficticio, cubriendo generación de datos sintéticos, limpieza, modelado, análisis de negocio, dashboards, automatización y AI workers analíticos.',
+    fr: 'Écosystème modulaire de données et d\'IA pour un e-commerce global fictif, couvrant génération de données synthétiques, nettoyage, modélisation, analyse métier, dashboards, automatisation et AI workers analytiques.'
   },
   'portfolio.tech.dataAnalysis': {
     pt: 'Análise de Dados',
@@ -290,6 +290,18 @@ const translations: Translations = {
     en: 'Business Intelligence',
     es: 'Business Intelligence',
     fr: 'Business Intelligence'
+  },
+  'portfolio.tech.aiWorkers': {
+    pt: 'AI Workers',
+    en: 'AI Workers',
+    es: 'AI Workers',
+    fr: 'AI Workers'
+  },
+  'portfolio.tech.automation': {
+    pt: 'Automação',
+    en: 'Automation',
+    es: 'Automatización',
+    fr: 'Automatisation'
   },
   
   // Contact Section
